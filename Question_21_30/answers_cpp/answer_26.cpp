@@ -38,7 +38,7 @@ cv::Mat bilinear(cv::Mat img, double rx, double ry){
         val = (1. - dx) * (1. - dy) * img.at<cv::Vec3b>(y_before, x_before)[c] +
           dx * (1. - dy) * img.at<cv::Vec3b>(y_before, x_before + 1)[c] +
           (1. - dx) * dy * img.at<cv::Vec3b>(y_before + 1, x_before)[c] +
-          dx * dy * img.at<cv::Vec3b>(y_before + 1, x_before)[c];
+          dx * dy * img.at<cv::Vec3b>(y_before + 1, x_before + 1)[c];
 
         // assign pixel to new position
         out.at<cv::Vec3b>(y, x)[c] = (uchar)val;
