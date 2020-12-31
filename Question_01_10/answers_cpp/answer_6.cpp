@@ -6,8 +6,8 @@
 
 // Dedcrease color
 cv::Mat decrease_color(cv::Mat img){
-  int height = img.cols;
-  int width = img.rows;
+  int width = img.cols;
+  int height = img.rows;
   int channel = img.channels();
 
   cv::Mat out = cv::Mat::zeros(height, width, CV_8UC3);
